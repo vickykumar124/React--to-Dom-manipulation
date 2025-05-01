@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    //  1st is react algorithm;
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    //  2nd is react dom  algoriyhm;
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+     //3rd id babel algorithm;
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <h1>jsx example</h1>
+    <div id="root">
+      
+    </div>
+//stynax of babel  is using type after script.
+    <script type="text/babel">
+
+        const rootElement=document.getElementById("root");
+
+
+        function Heading(){
+            return <h1 style={{ color : "green" }}>hello world</h1>   
+         // return <h1>hello world</h1>; 
+        }
+   //ReactDOM.render(<Heading />, rootElement);
+   ReactDOM.render(<Heading />, rootElement);
+
+    </script>
+</body>
+</html>
