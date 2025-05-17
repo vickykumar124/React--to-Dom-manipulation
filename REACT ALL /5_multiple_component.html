@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple component</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+</head>
+<body>
+    <h1>jsx  example using multiple componnent</h1>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+        const rootElement= document.getElementById("root");
+      
+   function Heading(props){
+    const age=props.age;
+    const name=props.name;
+    const color=props.color;
+    
+    return<h1 style={{color:'blue'}}>Hi from {name} and i am {age}years old  and it color is {color} ;</h1>;
+   }
+   function Headingparent(){
+   return  <div>
+       <Heading name={"vicky"} age={455} color={"red"} ></Heading>
+       <Heading name={"suresh"} age={45} color={"green"} ></Heading>
+       <Heading name={"rahul"} age={55} color={"pink"} ></Heading>
+       <Heading name={"ganesh"} age={5} color={"yellow"} ></Heading>
+       <Heading name={"rabaada"} age={7455} color={"blue"} ></Heading>
+       </div>
+    }
+    ReactDOM.render(<Headingparent />,rootElement);
+</script>
+</body>
+</html>
